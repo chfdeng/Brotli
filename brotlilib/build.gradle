@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 28
@@ -25,6 +26,15 @@ android {
             path "src/main/cpp/CMakeLists.txt"
         }
     }
+}
+
+publish {
+    userOrg = 'chfdeng'
+    groupId = 'org.zero'
+    artifactId = 'brotli'
+    publishVersion = '1.0.0'
+    desc = ''
+    website = 'https://github.com/fengchuiyeluo/Brotli'
 }
 
 dependencies {
